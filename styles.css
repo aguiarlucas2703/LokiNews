@@ -6,6 +6,14 @@
     transform: translateX(-50%);
 }
 
+.parceiros {
+    background-color: #1A2639;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 h1 {
     font-family: Roboto, sans-serif;
     color: white;
