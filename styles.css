@@ -43,3 +43,18 @@ a {
     width: 655px;
     height: 655px;
 }
+
+.logos {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logos img {
+    width: 276px;
+    height: 109px;
+    object-fit: contain;
+    margin: 10px;
+    flex-wrap: wrap;
+}
