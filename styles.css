@@ -1,4 +1,7 @@
 /* Alan */
+img {
+    border-radius: 8px;
+}
 
 /* SEÇÇÃO DE DESTAQUES DA SEMANA */
 .secao-destaque-semana {
@@ -119,6 +122,7 @@ body {
     background-color: #1A2639;
     color: white;
     padding: 60px 0;
+
     /* Espaçamento vertical. O horizontal é controlado pelo container. */
 }
 
@@ -256,6 +260,69 @@ body {
     }
 }
 
+/* Responsividade para .secao-parceiros e .parceiros-grid */
+@media (max-width: 1024px) {
+    .parceiros-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .secao-parceiros {
+        padding: 30px 10px;
+    }
+
+    .parceiros-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .parceiros-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .secao-parceiros h1 {
+        font-size: 1.2rem;
+        padding: 10px 0;
+    }
+}
+
+/* Responsividade para .secao-destaque e .container-destaque */
+@media (max-width: 900px) {
+    .container-destaque {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+        align-items: center;
+    }
+
+    .conteudo-destaque {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .imagem-destaque {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .secao-destaque {
+        padding: 30px 5px;
+    }
+
+    .conteudo-destaque h1 {
+        font-size: 1.5rem;
+    }
+
+    .conteudo-destaque p {
+        font-size: 1rem;
+    }
+}
 
 /* ======================================================= */
 /* ESTILOS CORRIGIDOS E RESPONSIVOS PARA AS SEÇÕES DO HILQUIAS */
@@ -340,13 +407,15 @@ body {
     flex-basis: 30%;
     min-width: 250px;
     margin-bottom: 20px;
-    text-align: left; /* Garante que o conteúdo da coluna seja alinhado à esquerda */
+    text-align: left;
+    /* Garante que o conteúdo da coluna seja alinhado à esquerda */
 }
 
 .rodape-coluna h2,
 .rodape-coluna h3 {
     color: #FFFFFF;
-    margin-bottom: 10px; /* Adiciona espaçamento entre o título e a lista */
+    margin-bottom: 10px;
+    /* Adiciona espaçamento entre o título e a lista */
 }
 
 .rodape-coluna ul {
