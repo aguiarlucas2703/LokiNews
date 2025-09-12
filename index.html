@@ -6,25 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technews</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="/imagens/techflow.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/imagens/13-techflow.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 </head>
 
 <body>
+    <nav class="menu">
+        <div class="menu-container">
+          <div class="logo">TechNews</div>
+      
+          <!-- Botão hambúrguer -->
+          <div class="menu-toggle" onclick="document.querySelector('.menu ul').classList.toggle('active')">
+            ☰
+          </div>
+      
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Notícias</a></li>
+            <li><a href="#">Sobre</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+
+    <section class="secao-destaque">
+        <div class="conteudo-destaque">
+            <h1>O Futuro do Trabalho:
+                Como a IA está
+                Transformando o Mercado</h1>
+            <p>Descubra como a inteligência artificial está revolucionando as profissões e o que esperar para o futuro
+                do trabalho.</p>
+
+            <button disabled="disabled" class="button-blue">Ler mais</button>
+        </div>
+        <img src="imagens/1-futuro.png" alt="Pessoas olhando para tela" class="imagem-destaque">
+
+    </section>
+
+    <section class="secao-destaque-semana">
+        <div class="conteudo-destaque-semana">
+          <h1>Destaques da semana</h1>
+          <div class="cards-destaque">
+            <div class="card-destaque">
+              <img src="imagens/2-drone.png" alt="Drones na entrega" class="imagem-destaque">
+              <span class="titulo-destaque">Drones na entrega</span>
+              <span class="descricao-destaque">
+                Entregas rápidas e eficientes
+                com drones autônomos.
+              </span>
+            </div>
+      
+            <div class="card-destaque">
+              <img src="imagens/3-realidade_mista.png" alt="Óculos RM" class="imagem-destaque">
+              <span class="titulo-destaque">Realidade Mista no Escritório</span>
+              <span class="descricao-destaque">
+                Óculos RM mudam reuniões e
+                projetos de design.
+              </span>
+            </div>
+      
+            <div class="card-destaque">
+              <img src="imagens/4-bateria.png" alt="Baterias Sólidas" class="imagem-destaque">
+              <span class="titulo-destaque">Baterias Sólidas: A Revolução</span>
+              <span class="descricao-destaque">
+                Próxima geração de baterias
+                promete carros elétricos mais
+                baratos.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+
     <main class="noticiadestaque">
         <h1>IA Multimodal: O novo horizonte</h1>
         <p>Após ChatGPT, a nova era de IA que gera conteúdo em múltiplos formatos simultanemante.</p>
         <a href="/">Veja mais</a>
-        <img id="gpt" src="/imagens/chatgpt.webp" alt="Imagem ilustrativa do ChatGPT">
+        <img id="gpt" src="/imagens/5-chatgpt.webp" alt="Imagem ilustrativa do ChatGPT">
     </main>
     <main class="parceiros">
         <h1>Nossos parceiros</h1>
     </main>
 
+
+
+
     <section class="secao-destaque">
-        <img src="imagens/6.2.png" alt="Cérebro de IA com elementos musicais" class="imagem-destaque">
+        <img src="imagens/15-musica.png" alt="Cérebro de IA com elementos musicais" class="imagem-destaque">
         
         <div class="conteudo-destaque">
             <h1>IA na Música: Novos Gêneros</h1>
