@@ -16,25 +16,37 @@
 
 
 body.theme-vibrante {
-    /* Tema Claro Suave (Ajustado) */
- 
-    /* Tema Claro Suave (Ajustado para Alto Contraste) */
+    /* ... outras variáveis e regras de estilo ... */
 
     /* Cores de Fundo (mantidas) */
     --cor-header: #000;
-    --cor-fundo-geral: #5555;
+    --cor-fundo-geral: #FFFFFF;
     --cor-fundo-secao-destaque: #f1f3f5;
     --cor-fundo-secao-semana: #e9ecef;
     --cor-rodape: #343a40;
 
     /* Cores de Texto (ALTERADAS PARA MAIOR CONTRASTE) */
-    --cor-texto-principal: #000000;      /* ALTERADO: Texto principal agora é preto puro para máxima legibilidade */
-    --cor-texto-secundario: #495057;     /* ALTERADO: Texto secundário agora é um cinza bem mais escuro e definido */
+    --cor-texto-principal: #000000;
+    --cor-texto-secundario: #495057; 
     
     /* Cores de Destaque e Ações (mantidas) */
     --cor-destaque: #007BFF;
     --cor-botao-topo: #007BFF;
     --cor-texto-botao-topo: #FFFFFF;
+
+    /* Novas regras para garantir texto escuro em seções claras */
+    .secao-destaque {
+        color: var(--cor-texto-principal);
+    }
+
+    .secao-destaque-semana {
+        color: var(--cor-texto-principal);
+    }
+
+    /* Adicione esta regra para a descrição dos cards */
+    .descricao-destaque {
+        color: var(--cor-texto-secundario);
+    }
 }
 
 body {
