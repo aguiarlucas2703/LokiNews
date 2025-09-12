@@ -1,64 +1,134 @@
 /* ======================================================= */
-/* SEÇÃO NOSSOS PARCEIROS (VERSÃO FINAL)                   */
+/* ESTILOS GERAIS E PADRONIZAÇÃO                           */
 /* ======================================================= */
-
-/* --- Container Principal da Seção --- */
 body {
     margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2D333A;
 }
 
-.secao-parceiros {
-    background-color: #8a9ba7;
-    color: white;
-    padding: 40px 140px 40px;
-    /* Centraliza o conteúdo em telas grandes com uma largura máxima */
+/* Container padrão para centralizar o conteúdo de TODAS as seções */
+.container-geral {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    flex: auto;
-    ;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-/* --- Título da Seção --- */
-.secao-parceiros h1 {
-    font-family: Arial, sans-serif;
-    font-size: 2.5rem;
+
+/* ======================================================= */
+/* SEÇÃO DE DESTAQUE (IA MULTIMODAL / MÚSICA)              */
+/* ======================================================= */
+.secao-destaque {
+    background-color: #1A2639;
+    color: white;
+    padding: 60px 0;
+    /* Espaçamento vertical. O horizontal é controlado pelo container. */
+}
+
+/* Regra para o container dentro da seção de destaque, para manter o layout lado a lado */
+.container-destaque {
+    display: flex;
+    justify-content: space-between;
+    /* Alinha texto e imagem nas extremidades */
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.conteudo-destaque {
+    flex: 1;
+    /* Permite que o conteúdo de texto cresça */
+    min-width: 300px;
+    max-width: 50%;
+    /* Ocupa até metade do espaço */
     text-align: left;
-
-    /* Adiciona um espaço de respiro abaixo do título */
-    margin-bottom: 40px;
 }
 
-/* --- Grid dos Logos --- */
-.logos1,
-.logos2 {
+.conteudo-destaque h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+}
+
+.conteudo-destaque p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+.conteudo-destaque a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.imagem-destaque {
+    max-width: 45%;
+    /* Ocupa até 45% do espaço para não colar no texto */
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ======================================================= */
+/* SEÇÃO NOSSOS PARCEIROS                                  */
+/* ======================================================= */
+.secao-parceiros {
+    background-color: #2D333A;
+    /* Cor de fundo que estava no body */
+    color: white;
+    padding: 50px 0;
+    /* Espaçamento vertical */
+}
+
+.secao-parceiros h1 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: left;
+    /* Título alinhado à esquerda */
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.parceiros-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+}
+
+.parceiro-logo-box {
+    background-color: #4A525A;
+    border-radius: 8px;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
 }
 
-/* --- Espaçamento entre as duas linhas de logos --- */
-.logos1 {
-    margin-bottom: auto;
+.parceiro-logo-box:hover {
+    background-color: #5a626a;
 }
 
-/* --- Estilo das Imagens --- */
-.logos1 img,
-.logos2 img {
-    width: 100%;
+.parceiro-logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
     object-fit: contain;
-
-    /* Efeito de hover interativo */
     opacity: 0.8;
     transition: opacity 0.3s ease;
 }
 
-.logos1 img:hover,
-.logos2 img:hover {
+.parceiro-logo-box:hover img {
     opacity: 1;
-    /* Logo fica 100% visível ao passar o mouse */
 }
+
 
 
 /* ======================================================= */
@@ -70,7 +140,6 @@ body {
 
     .logos1,
     .logos2 {
-        /* O grid passa a ter 3 colunas */
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -78,20 +147,16 @@ body {
 /* --- Para Telas Pequenas (Celulares) --- */
 @media (max-width: 768px) {
     .secao-parceiros h1 {
-        /* O título fica centralizado em telas pequenas */
         text-align: center;
     }
 
     .logos1,
     .logos2 {
-        /* O grid passa a ter 2 colunas */
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        /* Espaçamento menor para caber melhor */
     }
 
     .logos1 {
-        /* Reduz o espaço entre as linhas no mobile */
         margin-bottom: 20px;
     }
 }
@@ -321,19 +386,4 @@ body {
     .rodape-coluna p {
         text-align: center;
     }
-}
-
-.logos {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-.logos img {
-    width: 276px;
-    height: 109px;
-    object-fit: contain;
-    margin: 10px;
-    flex-wrap: wrap;
 }
