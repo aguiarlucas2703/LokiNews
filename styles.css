@@ -1,335 +1,339 @@
+/* ======================================================= */
+/* SEÇÃO NOSSOS PARCEIROS (VERSÃO FINAL)                   */
+/* ======================================================= */
+
+/* --- Container Principal da Seção --- */
 body {
     margin: 0;
 }
 
-.noticiadestaque {
-    background-color: #1A2639;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+.secao-parceiros {
+    background-color: #8a9ba7;
+    color: white;
+    padding: 40px 140px 40px;
+    /* Centraliza o conteúdo em telas grandes com uma largura máxima */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: auto;
+    ;
 }
 
-.parceiros {
-    background-color: #1A2639;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+/* --- Título da Seção --- */
+.secao-parceiros h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+    text-align: left;
+
+    /* Adiciona um espaço de respiro abaixo do título */
+    margin-bottom: 40px;
 }
 
-h1 {
-    font-family: Roboto, sans-serif;
-    /* ======================================================= */
-    /* SEÇÃO DE LUCAS (ADAPTADO PARA logos1 E logos2)          */
-    /* ======================================================= */
+/* --- Grid dos Logos --- */
+.logos1,
+.logos2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: center;
+}
 
-    .secao-parceiros {
-        background-color: #2C353B;
-        color: white;
-        padding: 60px 40px;
-        max-width: 1200px;
-        margin: 0;
+/* --- Espaçamento entre as duas linhas de logos --- */
+.logos1 {
+    margin-bottom: auto;
+}
 
+/* --- Estilo das Imagens --- */
+.logos1 img,
+.logos2 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    /* Efeito de hover interativo */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.logos1 img:hover,
+.logos2 img:hover {
+    opacity: 1;
+    /* Logo fica 100% visível ao passar o mouse */
+}
+
+
+/* ======================================================= */
+/* RESPONSIVIDADE DA SEÇÃO                                 */
+/* ======================================================= */
+
+/* --- Para Telas Médias (Tablets) --- */
+@media (max-width: 1024px) {
+
+    .logos1,
+    .logos2 {
+        /* O grid passa a ter 3 colunas */
+        grid-template-columns: repeat(3, 1fr);
     }
+}
 
+/* --- Para Telas Pequenas (Celulares) --- */
+@media (max-width: 768px) {
     .secao-parceiros h1 {
-        font-size: 2.5rem;
-        margin-bottom: 30px;
-        font-family: Arial, sans-serif;
-        text-align: left;
+        /* O título fica centralizado em telas pequenas */
+        text-align: center;
     }
 
     .logos1,
     .logos2 {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
-        align-items: center;
+        /* O grid passa a ter 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        /* Espaçamento menor para caber melhor */
     }
 
     .logos1 {
-        margin-bottom: 40px;
+        /* Reduz o espaço entre as linhas no mobile */
+        margin-bottom: 20px;
     }
-
-    .logos1 img,
-    .logos2 img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        opacity: 0.8;
-        transition: opacity 0.3s ease;
-    }
-
-    .logos1 img:hover,
-    .logos2 img:hover {
-        opacity: 1;
-    }
+}
 
 
-    @media (max-width: 1024px) {
-
-        .logos1,
-        .logos2 {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .secao-parceiros h1 {
-            text-align: center;
-        }
-
-        .logos1,
-        .logos2 {
-            grid-template-columns: repeat(2, 1fr);
-            text-align: center;
-            gap: 20px;
-        }
-
-        .logos1 {
-            margin-bottom: 20px;
-        }
-    }
+/* ======================================================= */
+/* ESTILOS CORRIGIDOS E RESPONSIVOS PARA AS SEÇÕES DO HILQUIAS */
 
 
-    /* ======================================================= */
-    /* ESTILOS CORRIGIDOS E RESPONSIVOS PARA AS SEÇÕES DO HILQUIAS */
+/* Estilos Gerais para os links do rodapé */
+.rodape a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    padding: 0;
+}
 
+.rodape a:hover {
+    text-decoration: underline;
+}
 
-    /* Estilos Gerais para os links do rodapé */
-    .rodape a {
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-        text-decoration: none;
-        text-align: left;
-        padding: 0;
-    }
+/* Seção de Destaque (IA na Música) */
+.secao-destaque {
+    background-color: #1A2639;
+    color: white;
+    padding: 60px 40px;
+    min-height: 450px;
+    padding: 60px 40px;
+    /* Ajustei um pouco o padding geral */
+    min-height: 400px;
+    /* Altura mínima para acomodar a imagem */
 
-    .rodape a:hover {
-        text-decoration: underline;
-    }
+    /* CORRIGIDO: Usando Flexbox para alinhar a imagem e o texto lado a lado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+    align-items: center;
+    /* Centraliza os itens verticalmente */
+    gap: 40px;
+    /* Espaço entre a imagem e o texto */
 
-    /* Seção de Destaque (IA na Música) */
+    /* Para que o conteúdo se ajuste bem em telas menores */
+    flex-wrap: wrap;
+}
+
+.imagem-destaque {
+    max-width: 550px;
+    width: 100%;
+    max-width: 45%;
+    /* A imagem ocupa uma parte da largura */
+    height: auto;
+    display: block;
+    object-fit: contain;
+    /* Garante que a imagem se ajuste sem deformar */
+    display: block;
+    /* Remove espaço extra abaixo da imagem */
+}
+
+.conteudo-destaque {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    background-color: transparent;
+    padding: 20px 0;
+    text-align: left;
+    /* Alinha o texto à esquerda como solicitado */
+    max-width: 45%;
+    /* O texto ocupa a outra parte da largura */
+    background-color: transparent;
+    padding: 20px 0;
+    /* Ajustei o padding para remover o de lado */
+    border-radius: 8px;
+    text-align: left;
+}
+
+.conteudo-destaque h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+}
+
+.conteudo-destaque p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #060707;
+    background-color: #060707;
+    color: white;
+    padding: 50px 20px;
+}
+
+.rodape-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+    text-align: left;
+}
+
+.rodape-coluna {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.rodape-coluna h2,
+.rodape-coluna h3 {
+    color: #FFFFFF;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.rodape-coluna p {
+    line-height: 1.7;
+    color: #ccc;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+/* NOVO: Estilos para os ícones de redes sociais */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    font-size: 28px;
+    margin-right: 20px;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #61dafb;
+    /* Cor de destaque ao passar o mouse */
+}
+
+/* NOVO: Estilos para o botão "Voltar ao Topo" */
+.back-to-top-btn {
+    position: fixed;
+    /* Posição fixa na tela */
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #61dafb;
+    color: #1A2639;
+    border: none;
+    border-radius: 50%;
+    /* Deixa o botão redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    /* Transição suave para aparecer/desaparecer */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+}
+
+/* Classe que será adicionada via JS para mostrar o botão */
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-btn .material-symbols-outlined {
+    font-size: 28px;
+}
+
+@media (max-width: 900px) {
     .secao-destaque {
-        background-color: #1A2639;
-        color: white;
-        padding: 60px 40px;
-        min-height: 450px;
-        padding: 60px 40px;
-        /* Ajustei um pouco o padding geral */
-        min-height: 400px;
-        /* Altura mínima para acomodar a imagem */
-
-        /* CORRIGIDO: Usando Flexbox para alinhar a imagem e o texto lado a lado */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        flex-wrap: wrap;
-        overflow: hidden;
-        justify-content: center;
-        /* Centraliza os itens horizontalmente */
-        align-items: center;
-        /* Centraliza os itens verticalmente */
-        gap: 40px;
-        /* Espaço entre a imagem e o texto */
-
-        /* Para que o conteúdo se ajuste bem em telas menores */
-        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
     }
 
     .imagem-destaque {
-        max-width: 550px;
-        width: 100%;
-        max-width: 45%;
-        /* A imagem ocupa uma parte da largura */
-        height: auto;
-        display: block;
-        object-fit: contain;
-        /* Garante que a imagem se ajuste sem deformar */
-        display: block;
-        /* Remove espaço extra abaixo da imagem */
+        max-width: 80%;
+        margin-bottom: 30px;
     }
 
     .conteudo-destaque {
-        flex: 1;
-        min-width: 300px;
-        max-width: 600px;
-        background-color: transparent;
-        padding: 20px 0;
-        text-align: left;
-        /* Alinha o texto à esquerda como solicitado */
-        max-width: 45%;
-        /* O texto ocupa a outra parte da largura */
-        background-color: transparent;
-        padding: 20px 0;
-        /* Ajustei o padding para remover o de lado */
-        border-radius: 8px;
-        text-align: left;
+        max-width: 90%;
+        text-align: center;
     }
 
     .conteudo-destaque h1 {
-        font-size: 2.8rem;
-        margin-bottom: 15px;
-        font-family: Arial, sans-serif;
-        line-height: 1.2;
+        font-size: 2rem;
     }
 
     .conteudo-destaque p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        font-family: Arial, sans-serif;
+        font-size: 1rem;
     }
+}
 
-    /* Rodapé */
-    .rodape {
-        background-color: #060707;
-        background-color: #060707;
-        color: white;
-        padding: 50px 20px;
-    }
-
+@media (max-width: 600px) {
     .rodape-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        text-align: left;
-        text-align: left;
+        flex-direction: column;
+        align-items: center;
     }
 
     .rodape-coluna {
-        width: 30%;
-        min-width: 250px;
-        margin-bottom: 20px;
+        width: 90%;
+        text-align: center;
     }
 
     .rodape-coluna h2,
-    .rodape-coluna h3 {
-        color: #FFFFFF;
-        text-align: left;
-        font-family: Arial, sans-serif;
-    }
-
+    .rodape-coluna h3,
     .rodape-coluna p {
-        line-height: 1.7;
-        color: #ccc;
-        text-align: left;
-        font-family: Arial, sans-serif;
+        text-align: center;
     }
+}
 
-    /* NOVO: Estilos para os ícones de redes sociais */
-    .social-links {
-        margin-top: 15px;
-    }
+.logos {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
 
-    .social-links a {
-        font-size: 28px;
-        margin-right: 20px;
-        color: #ccc;
-        transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-        color: #61dafb;
-        /* Cor de destaque ao passar o mouse */
-    }
-
-    /* NOVO: Estilos para o botão "Voltar ao Topo" */
-    .back-to-top-btn {
-        position: fixed;
-        /* Posição fixa na tela */
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        background-color: #61dafb;
-        color: #1A2639;
-        border: none;
-        border-radius: 50%;
-        /* Deixa o botão redondo */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
-        /* Transição suave para aparecer/desaparecer */
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(20px);
-        transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
-    }
-
-    /* Classe que será adicionada via JS para mostrar o botão */
-    .back-to-top-btn.show {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-
-    .back-to-top-btn .material-symbols-outlined {
-        font-size: 28px;
-    }
-
-    @media (max-width: 900px) {
-        .secao-destaque {
-            flex-direction: column;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .imagem-destaque {
-            max-width: 80%;
-            margin-bottom: 30px;
-        }
-
-        .conteudo-destaque {
-            max-width: 90%;
-            text-align: center;
-        }
-
-        .conteudo-destaque h1 {
-            font-size: 2rem;
-        }
-
-        .conteudo-destaque p {
-            font-size: 1rem;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .rodape-container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .rodape-coluna {
-            width: 90%;
-            text-align: center;
-        }
-
-        .rodape-coluna h2,
-        .rodape-coluna h3,
-        .rodape-coluna p {
-            text-align: center;
-        }
-    }
-
-    .logos {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .logos img {
-        width: 276px;
-        height: 109px;
-        object-fit: contain;
-        margin: 10px;
-        flex-wrap: wrap;
-    }
+.logos img {
+    width: 276px;
+    height: 109px;
+    object-fit: contain;
+    margin: 10px;
+    flex-wrap: wrap;
+}
