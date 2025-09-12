@@ -1,0 +1,90 @@
+
+/* SEÇÇÃO DE DESTAQUES DA SEMANA */
+  .secao-destaque-semana {
+    background-color: #2C353B;
+    color: white;
+    padding: 60px 40px;
+  }
+  
+  .conteudo-destaque-semana {
+    max-width: 1200px;  
+    margin: 0 auto;      
+  }
+  
+  .secao-destaque-semana h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #fff;
+    text-align: left;   
+    padding: 20px;
+  }
+  
+  .cards-destaque {
+    display: grid;
+    margin-left: 15px;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;                             
+  }
+  
+  .card-destaque {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .card-destaque img {
+    width: 100%;
+    height: 200px;      
+    object-fit: cover;  
+  }
+  
+  .titulo-destaque {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .descricao-destaque {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #ddd;
+  }
+/* Reponsividade do menu */
+
+@media (max-width: 768px) {
+    .menu ul {
+      display: none;
+      flex-direction: column;
+      background-color: #303952;
+      position: absolute;
+      top: 70px; 
+      right: 0;
+      width: 200px;
+      padding: 15px;
+    }
+  
+    .menu ul.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+
+  /* resposividade cards destaques da semana */
+
+  @media (max-width: 900px) {
+    .cards-destaque {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .cards-destaque {
+      grid-template-columns: 1fr;
+    }
+  }

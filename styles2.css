@@ -1,149 +1,6 @@
 body{
     margin: 0;
-    font-family: Roboto, sans-serif;
-
 }
-.menu {
-    background-color: #303952;
-    padding: 34px  20px  34px 70px;  
-  }
-  
-  .menu-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  
-  .menu .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-  }
-  
-  .menu ul li a:hover {
-    color: #00AAFF;
-  }
-  
-  .menu-toggle {
-    display: none;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-  }
-
-
-  /* SEÇÇÃO DE DESTAQUES DA SEMANA */
-  .secao-destaque-semana {
-    background-color: #2C353B;
-    color: white;
-    padding: 60px 40px;
-  }
-  
-  .conteudo-destaque-semana {
-    max-width: 1200px;  
-    margin: 0 auto;      
-  }
-  
-  .secao-destaque-semana h1 {
-    margin-bottom: 30px;
-    font-size: 28px;
-    color: #fff;
-    text-align: left;   
-    padding: 20px;
-  }
-  
-  .cards-destaque {
-    display: grid;
-    margin-left: 15px;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px;                             
-  }
-  
-  .card-destaque {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-  
-  .card-destaque img {
-    width: 100%;
-    height: 200px;      
-    object-fit: cover;  
-  }
-  
-  .titulo-destaque {
-    margin-top: 12px;
-    font-weight: bold;
-    font-size: 16px;
-    color: #fff;
-  }
-  
-  .descricao-destaque {
-    margin-top: 6px;
-    font-size: 14px;
-    line-height: 1.4;
-    color: #ddd;
-  }
-/* Reponsividade do menu */
-
-@media (max-width: 768px) {
-    .menu ul {
-      display: none;
-      flex-direction: column;
-      background-color: #303952;
-      position: absolute;
-      top: 70px; 
-      right: 0;
-      width: 200px;
-      padding: 15px;
-    }
-  
-    .menu ul.active {
-      display: flex;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-  }
-
-  /* resposividade cards destaques da semana */
-
-  @media (max-width: 900px) {
-    .cards-destaque {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .cards-destaque {
-      grid-template-columns: 1fr;
-    }
-  }
-
-
-
-
-
 .noticiadestaque {
     background-color: #1A2639;
     width: 100vw;
@@ -216,9 +73,7 @@ a {
     padding: 60px 40px;
     min-height: 450px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+    justify-content: space-evenly; 
     flex-wrap: wrap;
     overflow: hidden;
 }
@@ -237,7 +92,6 @@ a {
     max-width: 600px;
     background-color: transparent;
     padding: 20px 0;
-    text-align: left; /* Alinha o texto à esquerda como solicitado */
 }
 
 .conteudo-destaque h1 {
@@ -245,14 +99,15 @@ a {
     margin-bottom: 15px;
     font-family: Arial, sans-serif;
     line-height: 1.2;
+    text-align: left; 
 }
 
 .conteudo-destaque p {
     font-size: 1.2rem;
     line-height: 1.6;
     font-family: Arial, sans-serif;
+    text-align: left; /* ADICIONADO: Força o alinhamento à esquerda */
 }
-
 /* Rodapé */
 .rodape {
     background-color: #060707;
