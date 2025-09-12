@@ -319,43 +319,57 @@ body {
     /* ADICIONADO: Força o alinhamento à esquerda */
 }
 
+
+
 /* Rodapé */
 .rodape {
     background-color: #060707;
     color: white;
-    padding: 50px 20px;
+    padding: 50px 40px;
 }
 
 .rodape-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    text-align: left;
 }
 
 .rodape-coluna {
-    width: 30%;
+    flex-basis: 30%;
     min-width: 250px;
     margin-bottom: 20px;
+    text-align: left; /* Garante que o conteúdo da coluna seja alinhado à esquerda */
 }
 
 .rodape-coluna h2,
 .rodape-coluna h3 {
     color: #FFFFFF;
-    text-align: left;
-    font-family: Arial, sans-serif;
+    margin-bottom: 10px; /* Adiciona espaçamento entre o título e a lista */
 }
 
-.rodape-coluna p {
-    line-height: 1.7;
+.rodape-coluna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape-coluna ul li {
+    margin-bottom: 8px;
     color: #ccc;
-    text-align: left;
-    font-family: Arial, sans-serif;
+    line-height: 1.7;
 }
 
-/* NOVO: Estilos para os ícones de redes sociais */
+.rodape-coluna ul a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.rodape-coluna ul a:hover {
+    text-decoration: underline;
+}
+
 .social-links {
     margin-top: 15px;
 }
@@ -369,8 +383,10 @@ body {
 
 .social-links a:hover {
     color: #61dafb;
-    /* Cor de destaque ao passar o mouse */
 }
+
+
+
 
 /* NOVO: Estilos para o botão "Voltar ao Topo" */
 .back-to-top-btn {
