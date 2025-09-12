@@ -490,3 +490,32 @@ input:checked+.slider:before {
         padding: 10px 0;
     }
 }
+
+
+/* ======================================================= */
+/* ESTILOS ESPECÍFICOS DO BOTÃO                            */
+/* ======================================================= */
+
+.button-purple {
+    background-color: #7B68EE; /* Roxo suave */
+    color: white;
+    padding: 15px 30px; /* Aumenta a área do botão */
+    font-size: 1.1rem; /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-purple:hover {
+    background-color: #6A5ACD; /* Roxo um pouco mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+.button-purple:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+    transform: none;
+}
