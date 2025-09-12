@@ -1,553 +1,11 @@
-/* Alan */
-img {
-    border-radius: 8px;
-}
-
-/* SEÇÇÃO DE DESTAQUES DA SEMANA */
-.secao-destaque-semana {
-    background-color: #2C353B;
-    color: white;
-    padding: 60px 40px;
-}
-
-.conteudo-destaque-semana {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.secao-destaque-semana h1 {
-    margin-bottom: 30px;
-    font-size: 28px;
-    color: #fff;
-    text-align: left;
-    padding: 20px;
-}
-
-.cards-destaque {
-    display: grid;
-    margin-left: 15px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.card-destaque {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
-
-.card-destaque img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.titulo-destaque {
-    margin-top: 12px;
-    font-weight: bold;
-    font-size: 16px;
-    color: #fff;
-}
-
-.descricao-destaque {
-    margin-top: 6px;
-    font-size: 14px;
-    line-height: 1.4;
-    color: #ddd;
-}
-
-/* Reponsividade do menu */
-
-@media (max-width: 768px) {
-    .menu ul {
-        display: none;
-        flex-direction: column;
-        background-color: #303952;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 200px;
-        padding: 15px;
-    }
-
-    .menu ul.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-/* resposividade cards destaques da semana */
-
-@media (max-width: 900px) {
-    .cards-destaque {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .cards-destaque {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Lucas */
-
 /* ======================================================= */
-/* ESTILOS GERAIS E PADRONIZAÇÃO                           */
-/* ======================================================= */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #2D333A;
-}
-
-/* Container padrão para centralizar o conteúdo de TODAS as seções */
-.container-geral {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-
-/* ======================================================= */
-/* SEÇÃO DE DESTAQUE (IA MULTIMODAL / MÚSICA)              */
-/* ======================================================= */
-.secao-destaque {
-    background-color: #1A2639;
-    color: white;
-    padding: 60px 0;
-
-    /* Espaçamento vertical. O horizontal é controlado pelo container. */
-}
-
-/* Regra para o container dentro da seção de destaque, para manter o layout lado a lado */
-.container-destaque {
-    display: flex;
-    justify-content: space-between;
-    /* Alinha texto e imagem nas extremidades */
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.conteudo-destaque {
-    flex: 1;
-    /* Permite que o conteúdo de texto cresça */
-    min-width: 300px;
-    max-width: 50%;
-    /* Ocupa até metade do espaço */
-    text-align: left;
-}
-
-.conteudo-destaque h1 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-    font-family: Arial, sans-serif;
-    line-height: 1.2;
-}
-
-.conteudo-destaque p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    font-family: Arial, sans-serif;
-}
-
-.conteudo-destaque a {
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.imagem-destaque {
-    max-width: 45%;
-    /* Ocupa até 45% do espaço para não colar no texto */
-    height: auto;
-    object-fit: contain;
-}
-
-
-/* ======================================================= */
-/* SEÇÃO NOSSOS PARCEIROS                                  */
-/* ======================================================= */
-.secao-parceiros {
-    background-color: #2D333A;
-    /* Cor de fundo que estava no body */
-    color: white;
-    padding: 50px 0;
-    /* Espaçamento vertical */
-}
-
-.secao-parceiros h1 {
-    font-size: 1.8rem;
-    font-weight: normal;
-    text-align: left;
-    /* Título alinhado à esquerda */
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
-.parceiros-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.parceiro-logo-box {
-    background-color: #4A525A;
-    border-radius: 8px;
-    aspect-ratio: 16 / 9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease;
-}
-
-.parceiro-logo-box:hover {
-    background-color: #5a626a;
-}
-
-.parceiro-logo-box img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.parceiro-logo-box:hover img {
-    opacity: 1;
-}
-
-
-
-/* ======================================================= */
-/* RESPONSIVIDADE DA SEÇÃO                                 */
-/* ======================================================= */
-
-/* --- Para Telas Médias (Tablets) --- */
-@media (max-width: 1024px) {
-
-    .logos1,
-    .logos2 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* --- Para Telas Pequenas (Celulares) --- */
-@media (max-width: 768px) {
-    .secao-parceiros h1 {
-        text-align: center;
-    }
-
-    .logos1,
-    .logos2 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .logos1 {
-        margin-bottom: 20px;
-    }
-}
-
-/* Responsividade para .secao-parceiros e .parceiros-grid */
-@media (max-width: 1024px) {
-    .parceiros-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .secao-parceiros {
-        padding: 30px 10px;
-    }
-
-    .parceiros-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-}
-
-@media (max-width: 600px) {
-    .parceiros-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .secao-parceiros h1 {
-        font-size: 1.2rem;
-        padding: 10px 0;
-    }
-}
-
-/* Responsividade para .secao-destaque e .container-destaque */
-@media (max-width: 900px) {
-    .container-destaque {
-        flex-direction: column;
-        gap: 20px;
-        padding: 0 10px;
-        align-items: center;
-    }
-
-    .conteudo-destaque {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .imagem-destaque {
-        max-width: 90%;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .secao-destaque {
-        padding: 30px 5px;
-    }
-
-    .conteudo-destaque h1 {
-        font-size: 1.5rem;
-    }
-
-    .conteudo-destaque p {
-        font-size: 1rem;
-    }
-}
-
-/* ======================================================= */
-/* ESTILOS CORRIGIDOS E RESPONSIVOS PARA AS SEÇÕES DO HILQUIAS */
-
-
-/* Estilos Gerais para os links do rodapé */
-.rodape a {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    text-decoration: none;
-    text-align: left;
-    padding: 0;
-}
-
-.rodape a:hover {
-    text-decoration: underline;
-}
-
-/* Seção de Destaque (IA na Música) */
-.secao-destaque {
-    background-color: #1A2639;
-    color: white;
-    padding: 60px 40px;
-    min-height: 450px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    overflow: hidden;
-}
-
-.imagem-destaque {
-    max-width: 550px;
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    /* Garante que a imagem se ajuste sem deformar */
-}
-
-.conteudo-destaque {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
-    background-color: transparent;
-    padding: 20px 0;
-}
-
-.conteudo-destaque h1 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-    font-family: Arial, sans-serif;
-    line-height: 1.2;
-    text-align: left;
-}
-
-.conteudo-destaque p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    font-family: Arial, sans-serif;
-    text-align: left;
-    /* ADICIONADO: Força o alinhamento à esquerda */
-}
-
-
-
-/* Rodapé */
-.rodape {
-    background-color: #060707;
-    color: white;
-    padding: 50px 40px;
-}
-
-.rodape-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.rodape-coluna {
-    flex-basis: 30%;
-    min-width: 250px;
-    margin-bottom: 20px;
-    text-align: left;
-    /* Garante que o conteúdo da coluna seja alinhado à esquerda */
-}
-
-.rodape-coluna h2,
-.rodape-coluna h3 {
-    color: #FFFFFF;
-    margin-bottom: 10px;
-    /* Adiciona espaçamento entre o título e a lista */
-}
-
-.rodape-coluna ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.rodape-coluna ul li {
-    margin-bottom: 8px;
-    color: #ccc;
-    line-height: 1.7;
-}
-
-.rodape-coluna ul a {
-    color: #ccc;
-    text-decoration: none;
-}
-
-.rodape-coluna ul a:hover {
-    text-decoration: underline;
-}
-
-.social-links {
-    margin-top: 15px;
-}
-
-.social-links a {
-    font-size: 28px;
-    margin-right: 20px;
-    color: #ccc;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #61dafb;
-}
-
-
-
-
-/* NOVO: Estilos para o botão "Voltar ao Topo" */
-.back-to-top-btn {
-    position: fixed;
-    /* Posição fixa na tela */
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: #61dafb;
-    color: #1A2639;
-    border: none;
-    border-radius: 50%;
-    /* Deixa o botão redondo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
-    /* Transição suave para aparecer/desaparecer */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
-}
-
-/* Classe que será adicionada via JS para mostrar o botão */
-.back-to-top-btn.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.back-to-top-btn .material-symbols-outlined {
-    font-size: 28px;
-}
-
-@media (max-width: 900px) {
-    .secao-destaque {
-        flex-direction: column;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .imagem-destaque {
-        max-width: 80%;
-        margin-bottom: 30px;
-    }
-
-    .conteudo-destaque {
-        max-width: 90%;
-        text-align: center;
-    }
-
-    .conteudo-destaque h1 {
-        font-size: 2rem;
-    }
-
-    .conteudo-destaque p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .rodape-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .rodape-coluna {
-        width: 90%;
-        text-align: center;
-    }
-
-    .rodape-coluna h2,
-    .rodape-coluna h3,
-    .rodape-coluna p {
-        text-align: center;
-    }
-}
-
-/* ======================================================= */
-/* DEFINIÇÃO DOS TEMAS (VARIÁVEIS CSS)            */
+/* VARIÁVEIS DE TEMA E ESTILOS GERAIS                      */
 /* ======================================================= */
 :root {
-    /* Tema Escuro (Padrão) */
     --cor-header: #303952;
-    --cor-secao-1: #1A2639;
-    --cor-secao-2: #1A2639;
-    --cor-secao-3: #1A2639;
-    /* Seção IA na Música */
+    --cor-fundo-geral: #2D333A;
+    --cor-fundo-secao-destaque: #1A2639;
+    --cor-fundo-secao-semana: #2C353B;
     --cor-rodape: #060707;
     --cor-texto-principal: #FFFFFF;
     --cor-texto-secundario: #ccc;
@@ -556,36 +14,53 @@ body {
     --cor-texto-botao-topo: #1A2639;
 }
 
+
 body.theme-vibrante {
-    /* Tema Vibrante (Novo) */
-    --cor-header: #4B0082;
-    --cor-secao-1: #3A73B1;
-    --cor-secao-2: #4B0082;
-    --cor-secao-3: #007BFF;
-    /* Seção IA na Música */
-    --cor-rodape: #000000;
-    /* Rodapé um pouco mais escuro para combinar */
-    --cor-texto-principal: #FFFFFF;
-    --cor-texto-secundario: #e0e0e0;
-    --cor-destaque: #FFFFFF;
-    --cor-botao-topo: #FFFFFF;
-    --cor-texto-botao-topo: #4B0082;
+    /* Tema Claro Suave (Ajustado) */
+ 
+    /* Tema Claro Suave (Ajustado para Alto Contraste) */
+
+    /* Cores de Fundo (mantidas) */
+    --cor-header: #000;
+    --cor-fundo-geral: #5555;
+    --cor-fundo-secao-destaque: #f1f3f5;
+    --cor-fundo-secao-semana: #e9ecef;
+    --cor-rodape: #343a40;
+
+    /* Cores de Texto (ALTERADAS PARA MAIOR CONTRASTE) */
+    --cor-texto-principal: #000000;      /* ALTERADO: Texto principal agora é preto puro para máxima legibilidade */
+    --cor-texto-secundario: #495057;     /* ALTERADO: Texto secundário agora é um cinza bem mais escuro e definido */
+    
+    /* Cores de Destaque e Ações (mantidas) */
+    --cor-destaque: #007BFF;
+    --cor-botao-topo: #007BFF;
+    --cor-texto-botao-topo: #FFFFFF;
 }
 
-/* ======================================================= */
-/* ESTILOS GERAIS                        */
-/* ======================================================= */
 body {
     margin: 0;
-    background-color: var(--cor-secao-1);
-    /* Cor de fundo geral */
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo-geral);
     color: var(--cor-texto-principal);
-    font-family: Arial, Helvetica, sans-serif;
     transition: background-color 0.4s ease;
 }
 
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container-geral {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
 /* ======================================================= */
-/* NOVO CABEÇALHO                        */
+/* CABEÇALHO (HEADER)                                      */
 /* ======================================================= */
 header {
     background-color: var(--cor-header);
@@ -596,8 +71,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    width: calc(100% - 80px);
-    /* Para compensar o padding */
     transition: background-color 0.4s ease;
 }
 
@@ -627,7 +100,6 @@ nav a.active {
     color: var(--cor-destaque);
 }
 
-/* Container do botão de tema */
 .theme-switcher-container {
     display: flex;
     align-items: center;
@@ -639,7 +111,6 @@ nav a.active {
     color: var(--cor-texto-principal);
 }
 
-/* Estilo do botão de tema (switch) */
 .theme-switch {
     position: relative;
     display: inline-block;
@@ -686,115 +157,336 @@ input:checked+.slider:before {
 }
 
 /* ======================================================= */
-/* ESTILOS DAS SEÇÕES (Refatorado)          */
+/* SEÇÕES DE DESTAQUE (PADRÃO COM IMAGEM E TEXTO)          */
 /* ======================================================= */
-
-.noticiadestaque {
-    background-color: var(--cor-secao-1);
-}
-
-.parceiros {
-    background-color: var(--cor-secao-2);
-}
-
-h1,
-.conteudo-destaque h1,
-.rodape-coluna h2 {
-    font-family: Roboto, sans-serif;
-    color: var(--cor-texto-principal);
-    text-align: center;
-    padding: 20px;
-}
-
-p,
-.conteudo-destaque p,
-.rodape-coluna p {
-    font-family: Roboto, sans-serif;
-    color: var(--cor-texto-secundario);
-    text-align: center;
-    padding: 0 20px 20px 20px;
-}
-
-a {
-    font-family: Roboto, sans-serif;
-    color: var(--cor-destaque);
-    text-decoration: none;
-    padding: 0 20px 20px 20px;
-}
-
-#gpt {
-    /* Estilos mantidos como estavam */
-    margin-left: 600px;
-    margin-right: 0;
-    object-fit: contain;
-    width: 655px;
-    height: 655px;
-}
-
-/* Sua Seção (IA na Música) */
 .secao-destaque {
-    background-color: var(--cor-secao-3);
+    background-color: var(--cor-fundo-secao-destaque);
     color: var(--cor-texto-principal);
     padding: 60px 40px;
     min-height: 450px;
     display: flex;
     justify-content: space-evenly;
-    gap: 20px;
+    align-items: center;
+    gap: 40px;
     flex-wrap: wrap;
     overflow: hidden;
-    align-items: center;
     transition: background-color 0.4s ease;
 }
 
-.conteudo-destaque h1,
-.conteudo-destaque p {
+.conteudo-destaque {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
     text-align: left;
-    /* Garante o alinhamento correto */
 }
 
-/* Rodapé */
+.conteudo-destaque h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.conteudo-destaque p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.conteudo-destaque a {
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.imagem-destaque {
+    flex: 1;
+    max-width: 550px;
+    min-width: 300px;
+    object-fit: contain;
+}
+
+
+/* ======================================================= */
+/* SEÇÃO: DESTAQUES DA SEMANA (COM CARDS)                  */
+/* ======================================================= */
+.secao-destaque-semana {
+    background-color: var(--cor-fundo-secao-semana);
+    color: white;
+    padding: 60px 0;
+}
+
+.secao-destaque-semana h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: left;
+}
+
+.cards-destaque {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-destaque {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.card-destaque img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.titulo-destaque {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.descricao-destaque {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #ddd;
+}
+
+/* ======================================================= */
+/* SEÇÃO PARCEIROS (ESTILO ORIGINAL RESTAURADO)            */
+/* ======================================================= */
+.secao-parceiros {
+    background-color: #2D333A;
+    color: white;
+    padding: 50px 0;
+}
+
+.secao-parceiros h1 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.parceiros-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.parceiro-logo-box {
+    background-color: #4A525A;
+    border-radius: 8px;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.parceiro-logo-box:hover {
+    background-color: #5a626a;
+}
+
+.parceiro-logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.parceiro-logo-box:hover img {
+    opacity: 1;
+}
+
+/* ======================================================= */
+/* RODAPÉ (FOOTER)                                         */
+/* ======================================================= */
 .rodape {
     background-color: var(--cor-rodape);
+    color: white;
+    padding: 50px 40px;
 }
 
-.rodape a {
+.rodape-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.rodape-coluna {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+}
+
+.rodape-coluna h2,
+.rodape-coluna h3 {
+    margin-bottom: 15px;
+}
+
+.rodape-coluna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape-coluna ul li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.rodape-coluna a {
     color: var(--cor-texto-secundario);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.rodape a:hover {
+.rodape-coluna a:hover {
     color: var(--cor-destaque);
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 15px;
 }
 
 .social-links a {
-    color: var(--cor-texto-secundario);
+    font-size: 28px;
+    margin-right: 20px;
 }
 
-.social-links a:hover {
-    color: var(--cor-destaque);
-}
-
-/* Botão Voltar ao Topo */
+/* ======================================================= */
+/* BOTÃO "VOLTAR AO TOPO"                                  */
+/* ======================================================= */
 .back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
     background-color: var(--cor-botao-topo);
     color: var(--cor-texto-botao-topo);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
 }
 
-/* Media Queries (mantidas como estavam) */
-@media (max-width: 900px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-        position: static;
-        /* Cabeçalho não fica fixo em telas pequenas */
-    }
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
+.back-to-top-btn .material-symbols-outlined {
+    font-size: 28px;
+}
+
+/* ======================================================= */
+/* RESPONSIVIDADE (MEDIA QUERIES)                          */
+/* ======================================================= */
+
+/* --- Telas Médias (até 1024px) --- */
+@media (max-width: 1024px) {
+    .parceiros-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --- Telas de Tablets (até 900px) --- */
+@media (max-width: 900px) {
     .secao-destaque {
         flex-direction: column;
         text-align: center;
+        padding: 40px 20px;
+    }
+
+    .conteudo-destaque {
+        text-align: center;
+        max-width: 90%;
     }
 
     .conteudo-destaque h1,
     .conteudo-destaque p {
         text-align: center;
+    }
+
+    .conteudo-destaque h1 {
+        font-size: 2rem;
+    }
+
+    .cards-destaque {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rodape-coluna {
+        text-align: center;
+    }
+}
+
+/* --- Telas de Celulares Maiores (até 768px) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        position: static;
+    }
+
+    /* Estilos originais restaurados para parceiros */
+    .secao-parceiros {
+        padding: 30px 10px;
+    }
+    
+    .secao-parceiros h1 {
+       text-align: center;
+    }
+
+    .parceiros-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+/* --- Telas de Celulares (até 600px) --- */
+@media (max-width: 600px) {
+    .cards-destaque {
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo-destaque h1 {
+        font-size: 1.8rem;
+    }
+
+    .conteudo-destaque p {
+        font-size: 1rem;
+    }
+    
+    /* Estilos originais restaurados para parceiros */
+    .parceiros-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .secao-parceiros h1 {
+        font-size: 1.2rem;
+        padding: 10px 0;
     }
 }
