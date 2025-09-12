@@ -1,0 +1,715 @@
+/* Alan */
+
+/* SEÇÇÃO DE DESTAQUES DA SEMANA */
+.secao-destaque-semana {
+    background-color: #2C353B;
+    color: white;
+    padding: 60px 40px;
+}
+
+.conteudo-destaque-semana {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.secao-destaque-semana h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+}
+
+.cards-destaque {
+    display: grid;
+    margin-left: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-destaque {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.card-destaque img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.titulo-destaque {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+}
+
+.descricao-destaque {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #ddd;
+}
+
+/* Reponsividade do menu */
+
+@media (max-width: 768px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        background-color: #303952;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 15px;
+    }
+
+    .menu ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* resposividade cards destaques da semana */
+
+@media (max-width: 900px) {
+    .cards-destaque {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-destaque {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Lucas */
+
+/* ======================================================= */
+/* ESTILOS GERAIS E PADRONIZAÇÃO                           */
+/* ======================================================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2D333A;
+}
+
+/* Container padrão para centralizar o conteúdo de TODAS as seções */
+.container-geral {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+/* ======================================================= */
+/* SEÇÃO DE DESTAQUE (IA MULTIMODAL / MÚSICA)              */
+/* ======================================================= */
+.secao-destaque {
+    background-color: #1A2639;
+    color: white;
+    padding: 60px 0;
+    /* Espaçamento vertical. O horizontal é controlado pelo container. */
+}
+
+/* Regra para o container dentro da seção de destaque, para manter o layout lado a lado */
+.container-destaque {
+    display: flex;
+    justify-content: space-between;
+    /* Alinha texto e imagem nas extremidades */
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.conteudo-destaque {
+    flex: 1;
+    /* Permite que o conteúdo de texto cresça */
+    min-width: 300px;
+    max-width: 50%;
+    /* Ocupa até metade do espaço */
+    text-align: left;
+}
+
+.conteudo-destaque h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+}
+
+.conteudo-destaque p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+.conteudo-destaque a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.imagem-destaque {
+    max-width: 45%;
+    /* Ocupa até 45% do espaço para não colar no texto */
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ======================================================= */
+/* SEÇÃO NOSSOS PARCEIROS                                  */
+/* ======================================================= */
+.secao-parceiros {
+    background-color: #2D333A;
+    /* Cor de fundo que estava no body */
+    color: white;
+    padding: 50px 0;
+    /* Espaçamento vertical */
+}
+
+.secao-parceiros h1 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: left;
+    /* Título alinhado à esquerda */
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.parceiros-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.parceiro-logo-box {
+    background-color: #4A525A;
+    border-radius: 8px;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.parceiro-logo-box:hover {
+    background-color: #5a626a;
+}
+
+.parceiro-logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.parceiro-logo-box:hover img {
+    opacity: 1;
+}
+
+
+
+/* ======================================================= */
+/* RESPONSIVIDADE DA SEÇÃO                                 */
+/* ======================================================= */
+
+/* --- Para Telas Médias (Tablets) --- */
+@media (max-width: 1024px) {
+
+    .logos1,
+    .logos2 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --- Para Telas Pequenas (Celulares) --- */
+@media (max-width: 768px) {
+    .secao-parceiros h1 {
+        text-align: center;
+    }
+
+    .logos1,
+    .logos2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .logos1 {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* ======================================================= */
+/* ESTILOS CORRIGIDOS E RESPONSIVOS PARA AS SEÇÕES DO HILQUIAS */
+
+
+/* Estilos Gerais para os links do rodapé */
+.rodape a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    padding: 0;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+/* Seção de Destaque (IA na Música) */
+.secao-destaque {
+    background-color: #1A2639;
+    color: white;
+    padding: 60px 40px;
+    min-height: 450px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.imagem-destaque {
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    /* Garante que a imagem se ajuste sem deformar */
+}
+
+.conteudo-destaque {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+.conteudo-destaque h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.conteudo-destaque p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    /* ADICIONADO: Força o alinhamento à esquerda */
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #060707;
+    color: white;
+    padding: 50px 20px;
+}
+
+.rodape-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.rodape-coluna {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.rodape-coluna h2,
+.rodape-coluna h3 {
+    color: #FFFFFF;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.rodape-coluna p {
+    line-height: 1.7;
+    color: #ccc;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+/* NOVO: Estilos para os ícones de redes sociais */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    font-size: 28px;
+    margin-right: 20px;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #61dafb;
+    /* Cor de destaque ao passar o mouse */
+}
+
+/* NOVO: Estilos para o botão "Voltar ao Topo" */
+.back-to-top-btn {
+    position: fixed;
+    /* Posição fixa na tela */
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #61dafb;
+    color: #1A2639;
+    border: none;
+    border-radius: 50%;
+    /* Deixa o botão redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    /* Transição suave para aparecer/desaparecer */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+}
+
+/* Classe que será adicionada via JS para mostrar o botão */
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-btn .material-symbols-outlined {
+    font-size: 28px;
+}
+
+@media (max-width: 900px) {
+    .secao-destaque {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .imagem-destaque {
+        max-width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .conteudo-destaque {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .conteudo-destaque h1 {
+        font-size: 2rem;
+    }
+
+    .conteudo-destaque p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .rodape-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodape-coluna {
+        width: 90%;
+        text-align: center;
+    }
+
+    .rodape-coluna h2,
+    .rodape-coluna h3,
+    .rodape-coluna p {
+        text-align: center;
+    }
+}
+
+/* ======================================================= */
+/* DEFINIÇÃO DOS TEMAS (VARIÁVEIS CSS)            */
+/* ======================================================= */
+:root {
+    /* Tema Escuro (Padrão) */
+    --cor-header: #303952;
+    --cor-secao-1: #1A2639;
+    --cor-secao-2: #1A2639;
+    --cor-secao-3: #1A2639;
+    /* Seção IA na Música */
+    --cor-rodape: #060707;
+    --cor-texto-principal: #FFFFFF;
+    --cor-texto-secundario: #ccc;
+    --cor-destaque: #61dafb;
+    --cor-botao-topo: #61dafb;
+    --cor-texto-botao-topo: #1A2639;
+}
+
+body.theme-vibrante {
+    /* Tema Vibrante (Novo) */
+    --cor-header: #4B0082;
+    --cor-secao-1: #3A73B1;
+    --cor-secao-2: #4B0082;
+    --cor-secao-3: #007BFF;
+    /* Seção IA na Música */
+    --cor-rodape: #000000;
+    /* Rodapé um pouco mais escuro para combinar */
+    --cor-texto-principal: #FFFFFF;
+    --cor-texto-secundario: #e0e0e0;
+    --cor-destaque: #FFFFFF;
+    --cor-botao-topo: #FFFFFF;
+    --cor-texto-botao-topo: #4B0082;
+}
+
+/* ======================================================= */
+/* ESTILOS GERAIS                        */
+/* ======================================================= */
+body {
+    margin: 0;
+    background-color: var(--cor-secao-1);
+    /* Cor de fundo geral */
+    color: var(--cor-texto-principal);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.4s ease;
+}
+
+/* ======================================================= */
+/* NOVO CABEÇALHO                        */
+/* ======================================================= */
+header {
+    background-color: var(--cor-header);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: calc(100% - 80px);
+    /* Para compensar o padding */
+    transition: background-color 0.4s ease;
+}
+
+.logo h2 a {
+    color: var(--cor-texto-principal);
+    text-decoration: none;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--cor-texto-secundario);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--cor-destaque);
+}
+
+/* Container do botão de tema */
+.theme-switcher-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-icon {
+    font-size: 24px;
+    color: var(--cor-texto-principal);
+}
+
+/* Estilo do botão de tema (switch) */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 26px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--cor-destaque);
+}
+
+input:checked+.slider:before {
+    transform: translateX(24px);
+}
+
+/* ======================================================= */
+/* ESTILOS DAS SEÇÕES (Refatorado)          */
+/* ======================================================= */
+
+.noticiadestaque {
+    background-color: var(--cor-secao-1);
+}
+
+.parceiros {
+    background-color: var(--cor-secao-2);
+}
+
+h1,
+.conteudo-destaque h1,
+.rodape-coluna h2 {
+    font-family: Roboto, sans-serif;
+    color: var(--cor-texto-principal);
+    text-align: center;
+    padding: 20px;
+}
+
+p,
+.conteudo-destaque p,
+.rodape-coluna p {
+    font-family: Roboto, sans-serif;
+    color: var(--cor-texto-secundario);
+    text-align: center;
+    padding: 0 20px 20px 20px;
+}
+
+a {
+    font-family: Roboto, sans-serif;
+    color: var(--cor-destaque);
+    text-decoration: none;
+    padding: 0 20px 20px 20px;
+}
+
+#gpt {
+    /* Estilos mantidos como estavam */
+    margin-left: 600px;
+    margin-right: 0;
+    object-fit: contain;
+    width: 655px;
+    height: 655px;
+}
+
+/* Sua Seção (IA na Música) */
+.secao-destaque {
+    background-color: var(--cor-secao-3);
+    color: var(--cor-texto-principal);
+    padding: 60px 40px;
+    min-height: 450px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    align-items: center;
+    transition: background-color 0.4s ease;
+}
+
+.conteudo-destaque h1,
+.conteudo-destaque p {
+    text-align: left;
+    /* Garante o alinhamento correto */
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--cor-rodape);
+}
+
+.rodape a {
+    color: var(--cor-texto-secundario);
+}
+
+.rodape a:hover {
+    color: var(--cor-destaque);
+}
+
+.social-links a {
+    color: var(--cor-texto-secundario);
+}
+
+.social-links a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Botão Voltar ao Topo */
+.back-to-top-btn {
+    background-color: var(--cor-botao-topo);
+    color: var(--cor-texto-botao-topo);
+}
+
+/* Media Queries (mantidas como estavam) */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        position: static;
+        /* Cabeçalho não fica fixo em telas pequenas */
+    }
+
+    .secao-destaque {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conteudo-destaque h1,
+    .conteudo-destaque p {
+        text-align: center;
+    }
+}
