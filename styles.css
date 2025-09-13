@@ -1,5 +1,5 @@
 /* ======================================================= */
-/* VARIÁVEIS DE TEMA E ESTILOS GERAIS                      */
+/* VARIÁVEIS DE TEMA E ESTILOS GERAIS                      */
 /* ======================================================= */
 :root {
     --cor-header: #303952;
@@ -14,24 +14,14 @@
     --cor-texto-botao-topo: #1A2639;
 }
 
-
 body.theme-vibrante {
-    /* Tema Claro Suave (Ajustado) */
- 
-    /* Tema Claro Suave (Ajustado para Alto Contraste) */
-
-    /* Cores de Fundo (mantidas) */
     --cor-header: #000;
-    --cor-fundo-geral: #5555;
-    --cor-fundo-secao-destaque: #f1f3f5;
+    --cor-fundo-geral: #f1f3f5;
+    --cor-fundo-secao-destaque: #e9ecef;
     --cor-fundo-secao-semana: #e9ecef;
     --cor-rodape: #343a40;
-
-    /* Cores de Texto (ALTERADAS PARA MAIOR CONTRASTE) */
-    --cor-texto-principal: #000000;      /* ALTERADO: Texto principal agora é preto puro para máxima legibilidade */
-    --cor-texto-secundario: #495057;     /* ALTERADO: Texto secundário agora é um cinza bem mais escuro e definido */
-    
-    /* Cores de Destaque e Ações (mantidas) */
+    --cor-texto-principal: #000000;
+    --cor-texto-secundario: #495057;
     --cor-destaque: #007BFF;
     --cor-botao-topo: #007BFF;
     --cor-texto-botao-topo: #FFFFFF;
@@ -55,12 +45,12 @@ img {
 .container-geral {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
 /* ======================================================= */
-/* CABEÇALHO (HEADER)                                      */
+/* CABEÇALHO (HEADER)                                      */
 /* ======================================================= */
 header {
     background-color: var(--cor-header);
@@ -157,7 +147,7 @@ input:checked+.slider:before {
 }
 
 /* ======================================================= */
-/* SEÇÕES DE DESTAQUE (PADRÃO COM IMAGEM E TEXTO)          */
+/* SEÇÕES DE DESTAQUE (PADRÃO COM IMAGEM E TEXTO)          */
 /* ======================================================= */
 .secao-destaque {
     background-color: var(--cor-fundo-secao-destaque);
@@ -205,13 +195,39 @@ input:checked+.slider:before {
     object-fit: contain;
 }
 
+/* Efeito de transição do texto */
+.bloco-texto {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.bloco-texto.oculto {
+    opacity: 0;
+    /* Ocupa o mesmo espaço do texto visível para evitar o layout "quebrar" */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Adicione esta regra para o contêiner do texto, que precisa ser relativo */
+.conteudo-destaque {
+    position: relative;
+}
+
+/* A nova estrutura do HTML usa uma classe .bloco-texto, a do exemplo anterior não tem */
+.conteudo-destaque>h1,
+.conteudo-destaque>p {
+    /* Alinhamento para os textos que não estão dentro do .bloco-texto */
+    text-align: left;
+}
 
 /* ======================================================= */
-/* SEÇÃO: DESTAQUES DA SEMANA (COM CARDS)                  */
+/* SEÇÃO: DESTAQUES DA SEMANA (COM CARDS)                  */
 /* ======================================================= */
 .secao-destaque-semana {
     background-color: var(--cor-fundo-secao-semana);
-    color: white;
+    color: var(--cor-texto-principal);
     padding: 60px 0;
 }
 
@@ -254,7 +270,7 @@ input:checked+.slider:before {
 }
 
 /* ======================================================= */
-/* SEÇÃO PARCEIROS (ESTILO ORIGINAL RESTAURADO)            */
+/* SEÇÃO PARCEIROS (ESTILO ORIGINAL RESTAURADO)            */
 /* ======================================================= */
 .secao-parceiros {
     background-color: #2D333A;
@@ -307,7 +323,7 @@ input:checked+.slider:before {
 }
 
 /* ======================================================= */
-/* RODAPÉ (FOOTER)                                         */
+/* RODAPÉ (FOOTER)                                         */
 /* ======================================================= */
 .rodape {
     background-color: var(--cor-rodape);
@@ -367,7 +383,7 @@ input:checked+.slider:before {
 }
 
 /* ======================================================= */
-/* BOTÃO "VOLTAR AO TOPO"                                  */
+/* BOTÃO "VOLTAR AO TOPO"                                  */
 /* ======================================================= */
 .back-to-top-btn {
     position: fixed;
@@ -401,7 +417,7 @@ input:checked+.slider:before {
 }
 
 /* ======================================================= */
-/* RESPONSIVIDADE (MEDIA QUERIES)                          */
+/* RESPONSIVIDADE (MEDIA QUERIES)                          */
 /* ======================================================= */
 
 /* --- Telas Médias (até 1024px) --- */
@@ -454,9 +470,9 @@ input:checked+.slider:before {
     .secao-parceiros {
         padding: 30px 10px;
     }
-    
+
     .secao-parceiros h1 {
-       text-align: center;
+        text-align: center;
     }
 
     .parceiros-grid {
@@ -478,7 +494,7 @@ input:checked+.slider:before {
     .conteudo-destaque p {
         font-size: 1rem;
     }
-    
+
     /* Estilos originais restaurados para parceiros */
     .parceiros-grid {
         grid-template-columns: 1fr;
@@ -489,4 +505,31 @@ input:checked+.slider:before {
         font-size: 1.2rem;
         padding: 10px 0;
     }
+}
+
+.container-texto {
+    /* Garante que o container tenha um tamanho definido */
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    /* Muda o cursor para indicar que é interativo */
+    position: relative;
+    /* Importante para posicionar os textos */
+}
+
+.container-texto p {
+    /* Estilos gerais para os parágrafos */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.oculto {
+    /* Inicia com opacidade zero, invisível */
+    opacity: 0;
 }
