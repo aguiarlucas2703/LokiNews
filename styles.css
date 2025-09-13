@@ -15,16 +15,37 @@
 }
 
 body.theme-vibrante {
+    /* ... outras variáveis e regras de estilo ... */
+
+    /* Cores de Fundo (mantidas) */
     --cor-header: #000;
-    --cor-fundo-geral: #f1f3f5;
-    --cor-fundo-secao-destaque: #e9ecef;
+    --cor-fundo-geral: #FFFFFF;
+    --cor-fundo-secao-destaque: #f1f3f5;
     --cor-fundo-secao-semana: #e9ecef;
     --cor-rodape: #343a40;
+
+    /* Cores de Texto (ALTERADAS PARA MAIOR CONTRASTE) */
     --cor-texto-principal: #000000;
     --cor-texto-secundario: #495057;
+
+    /* Cores de Destaque e Ações (mantidas) */
     --cor-destaque: #007BFF;
     --cor-botao-topo: #007BFF;
     --cor-texto-botao-topo: #FFFFFF;
+
+    /* Novas regras para garantir texto escuro em seções claras */
+    .secao-destaque {
+        color: var(--cor-texto-principal);
+    }
+
+    .secao-destaque-semana {
+        color: var(--cor-texto-principal);
+    }
+
+    /* Adicione esta regra para a descrição dos cards */
+    .descricao-destaque {
+        color: var(--cor-texto-secundario);
+    }
 }
 
 body {
@@ -507,29 +528,35 @@ input:checked+.slider:before {
     }
 }
 
-.container-texto {
-    /* Garante que o container tenha um tamanho definido */
-    width: 300px;
-    height: 100px;
-    text-align: center;
-    border: 1px solid #ccc;
+
+/* ======================================================= */
+/* ESTILOS ESPECÍFICOS DO BOTÃO                            */
+/* ======================================================= */
+
+.button-purple {
+    background-color: #7B68EE;
+    /* Roxo suave */
+    color: white;
+    padding: 15px 30px;
+    /* Aumenta a área do botão */
+    font-size: 1.1rem;
+    /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    /* Muda o cursor para indicar que é interativo */
-    position: relative;
-    /* Importante para posicionar os textos */
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.container-texto p {
-    /* Estilos gerais para os parágrafos */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    transition: opacity 0.5s ease-in-out;
+.button-purple:hover {
+    background-color: #6A5ACD;
+    /* Roxo um pouco mais escuro ao passar o mouse */
+    transform: translateY(-2px);
 }
 
-.oculto {
-    /* Inicia com opacidade zero, invisível */
-    opacity: 0;
+.button-purple:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+    transform: none;
 }
