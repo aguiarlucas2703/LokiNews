@@ -16,22 +16,14 @@
 
 
 body.theme-vibrante {
-    /* Tema Claro Suave (Ajustado) */
- 
-    /* Tema Claro Suave (Ajustado para Alto Contraste) */
-
-    /* Cores de Fundo (mantidas) */
-    --cor-header: #000;
-    --cor-fundo-geral: #5555;
+    /* Cores de Fundo  */
+    --cor-header: #2D333A;
+    --cor-fundo-geral: #2D333A;
     --cor-fundo-secao-destaque: #f1f3f5;
-    --cor-fundo-secao-semana: #e9ecef;
-    --cor-rodape: #343a40;
-
-    /* Cores de Texto (ALTERADAS PARA MAIOR CONTRASTE) */
-    --cor-texto-principal: #000000;      /* ALTERADO: Texto principal agora é preto puro para máxima legibilidade */
-    --cor-texto-secundario: #495057;     /* ALTERADO: Texto secundário agora é um cinza bem mais escuro e definido */
-    
-    /* Cores de Destaque e Ações (mantidas) */
+    --cor-fundo-secao-semana: #2D333A;
+    --cor-rodape: #2D333A;
+    --cor-texto-principal: #000000;
+    --cor-texto-secundario: #FFFFFF;
     --cor-destaque: #007BFF;
     --cor-botao-topo: #007BFF;
     --cor-texto-botao-topo: #FFFFFF;
@@ -75,7 +67,7 @@ header {
 }
 
 .logo h2 a {
-    color: var(--cor-texto-principal);
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 24px;
 }
@@ -211,7 +203,7 @@ input:checked+.slider:before {
 /* ======================================================= */
 .secao-destaque-semana {
     background-color: var(--cor-fundo-secao-semana);
-    color: white;
+    color: #FFFFFF;
     padding: 60px 0;
 }
 
@@ -250,7 +242,7 @@ input:checked+.slider:before {
     margin-top: 6px;
     font-size: 14px;
     line-height: 1.4;
-    color: #ddd;
+    color: #ffffff;
 }
 
 /* ======================================================= */
@@ -454,9 +446,9 @@ input:checked+.slider:before {
     .secao-parceiros {
         padding: 30px 10px;
     }
-    
+
     .secao-parceiros h1 {
-       text-align: center;
+        text-align: center;
     }
 
     .parceiros-grid {
@@ -478,7 +470,7 @@ input:checked+.slider:before {
     .conteudo-destaque p {
         font-size: 1rem;
     }
-    
+
     /* Estilos originais restaurados para parceiros */
     .parceiros-grid {
         grid-template-columns: 1fr;
