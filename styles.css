@@ -1,5 +1,5 @@
 /* ======================================================= */
-/* VARIÁVEIS DE TEMA E ESTILOS GERAIS                      */
+/* VARIÁVEIS DE TEMA E ESTILOS GERAIS                      */
 /* ======================================================= */
 :root {
     --cor-header: #303952;
@@ -14,7 +14,6 @@
     --cor-texto-botao-topo: #1A2639;
 }
 
-
 body.theme-vibrante {
     /* Cores de Fundo  */
     --cor-header: #2D333A;
@@ -27,6 +26,20 @@ body.theme-vibrante {
     --cor-destaque: #007BFF;
     --cor-botao-topo: #007BFF;
     --cor-texto-botao-topo: #FFFFFF;
+
+    /* Novas regras para garantir texto escuro em seções claras */
+    .secao-destaque {
+        color: var(--cor-texto-principal);
+    }
+
+    .secao-destaque-semana {
+        color: var(--cor-texto-principal);
+    }
+
+    /* Adicione esta regra para a descrição dos cards */
+    .descricao-destaque {
+        color: var(--cor-texto-secundario);
+    }
 }
 
 body {
@@ -47,12 +60,12 @@ img {
 .container-geral {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
 /* ======================================================= */
-/* CABEÇALHO (HEADER)                                      */
+/* CABEÇALHO (HEADER)                                      */
 /* ======================================================= */
 header {
     background-color: var(--cor-header);
@@ -149,7 +162,7 @@ input:checked+.slider:before {
 }
 
 /* ======================================================= */
-/* SEÇÕES DE DESTAQUE (PADRÃO COM IMAGEM E TEXTO)          */
+/* SEÇÕES DE DESTAQUE (PADRÃO COM IMAGEM E TEXTO)          */
 /* ======================================================= */
 .secao-destaque {
     background-color: var(--cor-fundo-secao-destaque);
@@ -197,9 +210,35 @@ input:checked+.slider:before {
     object-fit: contain;
 }
 
+/* Efeito de transição do texto */
+.bloco-texto {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.bloco-texto.oculto {
+    opacity: 0;
+    /* Ocupa o mesmo espaço do texto visível para evitar o layout "quebrar" */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Adicione esta regra para o contêiner do texto, que precisa ser relativo */
+.conteudo-destaque {
+    position: relative;
+}
+
+/* A nova estrutura do HTML usa uma classe .bloco-texto, a do exemplo anterior não tem */
+.conteudo-destaque>h1,
+.conteudo-destaque>p {
+    /* Alinhamento para os textos que não estão dentro do .bloco-texto */
+    text-align: left;
+}
 
 /* ======================================================= */
-/* SEÇÃO: DESTAQUES DA SEMANA (COM CARDS)                  */
+/* SEÇÃO: DESTAQUES DA SEMANA (COM CARDS)                  */
 /* ======================================================= */
 .secao-destaque-semana {
     background-color: var(--cor-fundo-secao-semana);
@@ -246,7 +285,7 @@ input:checked+.slider:before {
 }
 
 /* ======================================================= */
-/* SEÇÃO PARCEIROS (ESTILO ORIGINAL RESTAURADO)            */
+/* SEÇÃO PARCEIROS (ESTILO ORIGINAL RESTAURADO)            */
 /* ======================================================= */
 .secao-parceiros {
     background-color: #2D333A;
@@ -299,7 +338,7 @@ input:checked+.slider:before {
 }
 
 /* ======================================================= */
-/* RODAPÉ (FOOTER)                                         */
+/* RODAPÉ (FOOTER)                                         */
 /* ======================================================= */
 .rodape {
     background-color: var(--cor-rodape);
@@ -359,7 +398,7 @@ input:checked+.slider:before {
 }
 
 /* ======================================================= */
-/* BOTÃO "VOLTAR AO TOPO"                                  */
+/* BOTÃO "VOLTAR AO TOPO"                                  */
 /* ======================================================= */
 .back-to-top-btn {
     position: fixed;
@@ -393,7 +432,7 @@ input:checked+.slider:before {
 }
 
 /* ======================================================= */
-/* RESPONSIVIDADE (MEDIA QUERIES)                          */
+/* RESPONSIVIDADE (MEDIA QUERIES)                          */
 /* ======================================================= */
 
 /* --- Telas Médias (até 1024px) --- */
@@ -481,4 +520,37 @@ input:checked+.slider:before {
         font-size: 1.2rem;
         padding: 10px 0;
     }
+}
+
+
+/* ======================================================= */
+/* ESTILOS ESPECÍFICOS DO BOTÃO                            */
+/* ======================================================= */
+
+.button-purple {
+    background-color: #7B68EE;
+    /* Roxo suave */
+    color: white;
+    padding: 15px 30px;
+    /* Aumenta a área do botão */
+    font-size: 1.1rem;
+    /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-purple:hover {
+    background-color: #6A5ACD;
+    /* Roxo um pouco mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+.button-purple:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+    transform: none;
 }

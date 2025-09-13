@@ -110,3 +110,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const imagens = document.querySelectorAll('.card-destaque img, .imagem-destaque');
+
+    imagens.forEach(imagem => {
+        // Aplica a transição para o efeito ser suave
+        imagem.style.transition = 'transform 0.3s ease-in-out';
+
+        imagem.addEventListener('mouseenter', () => {
+            // Aumenta a imagem em 5% quando o mouse entra
+            imagem.style.transform = 'scale(1.05)';
+        });
+
+        imagem.addEventListener('mouseleave', () => {
+            // Volta a imagem ao tamanho original quando o mouse sai
+            imagem.style.transform = 'scale(1)';
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Código para o efeito de zoom em todas as imagens (mantido do exemplo anterior)
+    const allImages = document.querySelectorAll('img');
+    allImages.forEach(image => {
+        image.style.transition = 'transform 0.3s ease-in-out';
+        image.addEventListener('mouseenter', () => {
+            image.style.transform = 'scale(1.05)';
+        });
+        image.addEventListener('mouseleave', () => {
+            image.style.transform = 'scale(1)';
+        });
+    });
+
+    // Código para o efeito de transição de texto (Apenas para a seção de IA Multimodal)
+    const secaoIaMultimodal = document.querySelector('section.secao-destaque:nth-of-type(3)');
+
+    if (secaoIaMultimodal) {
+        const blocoPrincipal = secaoIaMultimodal.querySelector('.bloco-texto:not(.oculto)');
+        const blocoAlternativo = secaoIaMultimodal.querySelector('.bloco-texto.oculto');
+
+        if (blocoPrincipal && blocoAlternativo) {
+            secaoIaMultimodal.addEventListener('mouseenter', () => {
+                blocoPrincipal.classList.add('oculto');
+                blocoAlternativo.classList.remove('oculto');
+            });
+
+            secaoIaMultimodal.addEventListener('mouseleave', () => {
+                blocoAlternativo.classList.add('oculto');
+                blocoPrincipal.classList.remove('oculto');
+            });
+        }
+    }
+});
