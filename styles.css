@@ -1,3 +1,5 @@
+
+
 /* ======================================================= */
 /* VARIÁVEIS DE TEMA E ESTILOS GERAIS                      */
 /* ======================================================= */
@@ -74,9 +76,19 @@ img {
 /* ======================================================= */
 /* CABEÇALHO (HEADER)                                      */
 /* ======================================================= */
+
+#logo-header {
+    height: 100px;
+    width: auto;
+    
+    /* Aumenta a logo para 1.5 vezes o tamanho original */
+    transform: scale(1.8); 
+    /* Garante que o ponto central da imagem seja a origem da transformação */
+    transform-origin: center; 
+}
 header {
     background-color: var(--cor-header);
-    padding: 15px 40px;
+    padding: 5px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -344,13 +356,20 @@ input:checked+.slider:before {
 /* RODAPÉ (FOOTER)                                         */
 /* ======================================================= */
 
-
+#logo-rodape {
+    max-width: 100%; /* A imagem nunca será maior que seu container */
+    height: auto;    /* A altura se ajusta para manter a proporção */
+     /* Adicione esta linha para subir a logo */
+    margin-top: -20px; 
+}
 
 .rodape {
 background-color: var(--cor-rodape);
 color: white;
 /* Altera o padding horizontal de 40px para 0 */
-padding: 50px 0; 
+padding-top: 60px; 
+    /* Mantenha o espaço da parte de baixo menor, para o rodapé não ficar muito grande */
+    padding-bottom: 20px;  
 }
 
 
@@ -363,7 +382,8 @@ justify-content: flex-start;
 flex-wrap: wrap;
 gap: 20px;
 /* Adiciona um pequeno espaço à esquerda para empurrar o conteúdo */
-padding-left: 100px; 
+    padding: 0 50px; 
+
 }
 
 
@@ -378,7 +398,7 @@ text-align: left;
 
 /* Alinha a coluna "Contato" para a direita com um valor fixo */
 .rodape-coluna:nth-child(2) {
-margin-left: 190px;
+margin-left: 220px;
 }
 
 
@@ -386,7 +406,7 @@ margin-left: 190px;
 /* Garante que a coluna "Informações" não tenha espaçamentos indesejados */
 
 .rodape-container .rodape-coluna:nth-child(3) {
-margin-left: 200px;
+margin-left: 190px;
 padding-left: 0;
 }
 
@@ -434,6 +454,12 @@ text-decoration: underline;
     font-size: 28px;
     margin-right: 20px;
 }
+
+
+
+
+
+
 
 /* ======================================================= */
 /* BOTÃO "VOLTAR AO TOPO"                                  */
